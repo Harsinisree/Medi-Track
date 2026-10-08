@@ -1,0 +1,240 @@
+/* ==========================================================================
+   MediTrack - Accessibility Modifiers
+   Large Text, High Contrast Mode, and Simple Mode Styles
+   ========================================================================== */
+
+/* 1. Large Text Mode */
+body.mode-large-text {
+  font-size: 1.35rem; /* ~22px base */
+}
+
+body.mode-large-text .brand-title-group h1,
+body.mode-large-text .brand-title-group .brand-title {
+  font-size: 1.7rem;
+}
+
+body.mode-large-text .hero-med-title {
+  font-size: 2.75rem;
+}
+
+body.mode-large-text .hero-med-dosage {
+  font-size: 1.55rem;
+}
+
+body.mode-large-text .hero-med-instructions {
+  font-size: 1.35rem;
+}
+
+body.mode-large-text .btn-giant {
+  min-height: 76px;
+  font-size: 1.6rem;
+  padding: 1.25rem 2.5rem;
+}
+
+body.mode-large-text .med-card-title {
+  font-size: 1.6rem;
+}
+
+body.mode-large-text .med-scheduled-time {
+  font-size: 1.5rem;
+}
+
+body.mode-large-text .nav-link-btn {
+  font-size: 1.25rem;
+  padding: 1.1rem 1.25rem;
+}
+
+body.mode-large-text .metric-value {
+  font-size: 3.2rem;
+}
+
+/* 2. High Contrast Mode (WCAG AAA) */
+body.mode-high-contrast {
+  --bg-app: #000000;
+  --bg-surface: #0a0a0a;
+  --bg-surface-elevated: #171717;
+  --bg-surface-soft: #262626;
+
+  --text-main: #ffffff;
+  --text-muted: #e5e5e5;
+  --text-subtle: #d4d4d4;
+  --text-inverse: #000000;
+
+  --border-subtle: #ffffff;
+  --border-strong: #ffffff;
+
+  --primary-600: #fde047; /* High visibility bold yellow */
+  --primary-700: #eab308;
+  --primary-800: #ca8a04;
+  --primary-900: #ffffff;
+  --primary-100: #262626;
+  --primary-50: #171717;
+
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.mode-high-contrast .app-header,
+body.mode-high-contrast .app-sidebar,
+body.mode-high-contrast .mobile-bottom-nav,
+body.mode-high-contrast .card,
+body.mode-high-contrast .med-card,
+body.mode-high-contrast .modal-dialog,
+body.mode-high-contrast .metric-card {
+  background-color: #000000;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: none;
+}
+
+body.mode-high-contrast .hero-next-med {
+  background: #000000;
+  border: 4px solid #fde047;
+  box-shadow: none;
+}
+
+body.mode-high-contrast .hero-med-title,
+body.mode-high-contrast .card-title,
+body.mode-high-contrast .brand-title-group h1 {
+  color: #ffffff;
+}
+
+body.mode-high-contrast .hero-med-dosage {
+  color: #fde047;
+}
+
+body.mode-high-contrast .hero-med-instructions {
+  background-color: #171717;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+body.mode-high-contrast .btn-primary {
+  background-color: #fde047;
+  color: #000000;
+  border: 2px solid #ffffff;
+  font-weight: 900;
+}
+
+body.mode-high-contrast .btn-giant-success {
+  background: #22c55e;
+  color: #000000;
+  border: 3px solid #ffffff;
+  font-weight: 900;
+}
+
+body.mode-high-contrast .btn-giant-warning {
+  background: #fde047;
+  color: #000000;
+  border: 3px solid #ffffff;
+  font-weight: 900;
+}
+
+body.mode-high-contrast .btn-outline {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body.mode-high-contrast .nav-link-btn {
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+body.mode-high-contrast .nav-link-btn.active {
+  background-color: #fde047;
+  color: #000000;
+  font-weight: 900;
+  border-color: #ffffff;
+}
+
+body.mode-high-contrast .status-badge {
+  border: 2px solid #ffffff;
+  font-weight: 900;
+}
+
+body.mode-high-contrast .status-badge.status-taken {
+  background-color: #15803d;
+  color: #ffffff;
+}
+
+body.mode-high-contrast .status-badge.status-delayed {
+  background-color: #a16207;
+  color: #ffffff;
+}
+
+body.mode-high-contrast .status-badge.status-missed {
+  background-color: #b91c1c;
+  color: #ffffff;
+}
+
+body.mode-high-contrast .status-badge.status-upcoming {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+body.mode-high-contrast .duplicate-dose-alert {
+  background-color: #172554;
+  border: 3px solid #60a5fa;
+  color: #ffffff;
+}
+body.mode-high-contrast .duplicate-alert-content h4,
+body.mode-high-contrast .duplicate-alert-content p,
+body.mode-high-contrast .duplicate-disclaimer {
+  color: #ffffff;
+}
+
+body.mode-high-contrast .voice-action-hub {
+  background-color: #0a0a0a;
+  border: 3px solid #ffffff;
+}
+
+body.mode-high-contrast .chat-bubble.bubble-bot {
+  background-color: #1f2937;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body.mode-high-contrast .chat-bubble.bubble-user {
+  background-color: #fde047;
+  color: #000000;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+}
+
+/* 3. Simple Mode (Elderly Distraction-Free Layout) */
+body.mode-simple .sidebar-nav-list li:not(.simple-allowed),
+body.mode-simple .mobile-bottom-nav .mobile-nav-items li:not(.simple-allowed),
+body.mode-simple .timeline-card,
+body.mode-simple .non-simple-element {
+  display: none !important;
+}
+
+body.mode-simple .hero-next-med {
+  padding: 3rem 2rem;
+  margin-top: 1rem;
+}
+
+body.mode-simple .hero-action-buttons {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+body.mode-simple .btn-giant {
+  min-height: 80px;
+  font-size: 1.6rem;
+}
+
+body.mode-simple .voice-assistant-preview {
+  margin-top: 2rem;
+}
+
+/* Reduced Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
