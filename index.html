@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediTrack - Elderly-friendly medication management platform with real-time remote caregiver support and bilingual voice assistant.">
+  <title>MediTrack | Smarter Medication. Safer Routines. Better Care.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <style>
+    /* Landing page specific hero aesthetics */
+    .landing-hero {
+      padding: 4rem 1.5rem;
+      text-align: center;
+      background: radial-gradient(circle at 50% 20%, rgba(20, 184, 166, 0.12) 0%, rgba(248, 250, 252, 0) 70%);
+    }
+
+    .landing-title {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: var(--primary-900);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.03em;
+    }
+
+    .landing-tagline {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-700);
+      margin-bottom: 1.25rem;
+    }
+
+    .landing-description {
+      max-width: 720px;
+      margin: 0 auto 2.5rem auto;
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .role-selection-box {
+      background: white;
+      border: 2px solid var(--primary-200);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      max-width: 680px;
+      margin: 0 auto 4rem auto;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .role-buttons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .role-card-btn {
+      background-color: var(--bg-surface-soft);
+      border: 2px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .role-card-btn:hover {
+      border-color: var(--primary-600);
+      background-color: var(--primary-50);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      text-decoration: none;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+      max-width: 1100px;
+      margin: 0 auto 4rem auto;
+    }
+
+    @media (max-width: 768px) {
+      .landing-title { font-size: 2.3rem; }
+      .role-buttons-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header">
+    <a href="index.html" class="brand-wrapper" id="header-brand-link">
+      <div class="brand-logo-icon" aria-hidden="true">💊</div>
+      <div class="brand-title-group">
+        <span class="brand-title">MediTrack</span>
+        <span class="brand-tagline-small">Smarter Medication. Safer Routines.</span>
+      </div>
+    </a>
+
+    <div class="header-actions">
+      <a href="settings.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.95rem;">
+        ⚙️ Accessibility
+      </a>
+      <button class="btn btn-sos" id="header-sos-btn" aria-label="Open emergency help">
+        🆘 I NEED HELP
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Landing Content -->
+  <main class="page-content-container">
+    <section class="landing-hero">
+      <h1 class="landing-title">MediTrack</h1>
+      <p class="landing-tagline">"Smarter Medication. Safer Routines. Better Care."</p>
+      <p class="landing-description">
+        MediTrack helps older adults manage daily medication routines while giving caregivers clear visibility when support may be needed.
+      </p>
+
+      <!-- Role Selection Box (Section 4 & 5) -->
+      <div class="role-selection-box">
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">
+          Select Your Experience
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Choose how you would like to interact with the MediTrack prototype:
+        </p>
+
+        <div class="role-buttons-grid">
+          <a href="dashboard.html" class="role-card-btn" id="btn-login-older-adult">
+            <span style="font-size: 3.5rem; margin-bottom: 0.75rem;">👵</span>
+            <strong style="font-size: 1.35rem; color: var(--primary-900); margin-bottom: 0.35rem;">
+              I'm an Older Adult
+            </strong>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">
+              Simple, high-contrast dashboard with giant buttons and voice assistant.
+            </span>
+            <span class="btn btn-primary" style="margin-top: 1.25rem; width: 100%;">
+              Enter as Lakshmi &rarr;
+            </span>
+          </a>
+
+          <a href="caregiver.html" class="role-card-btn" id="btn-login-caregiver">
+            <span style="font-size: 3.5rem; margin-bottom: 0.75rem;">👩‍⚕️</span>
+            <strong style="font-size: 1.35rem; color: var(--primary-900); margin-bottom: 0.35rem;">
+              I'm a Caregiver
+            </strong>
+            <span style="font-size: 0.95rem; color: var(--text-muted);">
+              Remote monitoring, live adherence tracking, and smart escalation alerts.
+            </span>
+            <span class="btn btn-outline" style="margin-top: 1.25rem; width: 100%;">
+              Enter as Priya &rarr;
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature Cards (Section 5) -->
+      <div class="features-grid">
+        <article class="card" style="text-align: left;">
+          <div style="font-size: 2.8rem; margin-bottom: 0.75rem;">💊</div>
+          <h3 class="card-title">Medication Management</h3>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.5rem;">
+            Scheduled reminders, duplicate dose protection, and tactile one-click confirmations engineered specifically for older adults.
+          </p>
+        </article>
+
+        <article class="card" style="text-align: left;">
+          <div style="font-size: 2.8rem; margin-bottom: 0.75rem;">🗣️</div>
+          <h3 class="card-title">Voice Assistant</h3>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.5rem;">
+            Speak naturally in English or Tamil. Ask about next doses, confirm taken medications, or request help with zero typing required.
+          </p>
+        </article>
+
+        <article class="card" style="text-align: left;">
+          <div style="font-size: 2.8rem; margin-bottom: 0.75rem;">👨‍👩‍👧</div>
+          <h3 class="card-title">Caregiver Support</h3>
+          <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 0.5rem;">
+            Peace of mind for families. Remote visibility into taken, delayed, and missed medicines with automated multi-tier alert escalation.
+          </p>
+        </article>
+      </div>
+
+      <!-- Safety Rule Disclaimer (Section 1) -->
+      <footer class="safety-disclaimer-card" role="note">
+        <span style="font-size: 1.5rem;">⚠️</span>
+        <p>
+          <strong>IMPORTANT SAFETY RULE:</strong> MediTrack is NOT a medical diagnosis system. It does not provide medical diagnosis, treatment recommendations, dosage changes, or instructions to take additional medication. It solely manages information entered by the user and tracks medication routine activity.
+        </p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('btn-login-older-adult')?.addEventListener('click', () => {
+      window.MediStorage.setCurrentRole('older-adult');
+    });
+    document.getElementById('btn-login-caregiver')?.addEventListener('click', () => {
+      window.MediStorage.setCurrentRole('caregiver');
+    });
+  </script>
+</body>
+</html>
